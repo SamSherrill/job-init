@@ -1,0 +1,25 @@
+{
+  "name": "job-init",
+  "version": "1.0.0",
+  "description": "Powerful and Simple Job Searching App for Jr. Developers",
+  "main": "server.js",
+  "scripts": {
+    "lint": "eslint **/*.js --quiet",
+    "test": "npm run lint",
+    "start": "node server.js",
+    "dev": "nodemon server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/SamSherrill/job-init.git"
+  },
+  "author": "Sam Sherrill, Stephanie Smith, Jayson Duff, Jolie Guerra",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/SamSherrill/job-init/issues"
+  },
+  "homepage": "https://github.com/SamSherrill/job-init#readme",
+  "dependencies": {
+    "eslint": "^6.8.0"
+  }
+}
