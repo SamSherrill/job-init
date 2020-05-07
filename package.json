@@ -4,7 +4,7 @@
   "description": "Powerful and Simple Job Searching App for Jr. Developers",
   "main": "server.js",
   "scripts": {
-    "lint": "eslint **/*.js --quiet",
+    "lint": "eslint server.js --quiet",
     "test": "npm run lint",
     "start": "node server.js",
     "dev": "concurrently \"nodemon server.js\" \"cd client && npm run start\"",
