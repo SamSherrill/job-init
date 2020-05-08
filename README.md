@@ -1,5 +1,6 @@
 # Job Init
 
+
 ## Overview
 
 Describe it here
@@ -30,5 +31,12 @@ Deployed app: [https://job-int.herokuapp.com/](https://job-int.herokuapp.com/)
 
 GitHub repo: [https://github.com/SamSherrill/job-init](https://github.com/SamSherrill/job-init)
 
+## Deployment
+
 ## Credits
+
+## License
+
+This project is licensed under the MIT License-see the  
+##
 
