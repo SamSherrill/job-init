@@ -1,0 +1,26 @@
+.footer {
+    /* Positioning */
+    position: absolute;
+    bottom: 0;
+  
+    /* Box-model */
+    width: 100%;
+    height: 30px;
+  
+    /* Visual */
+    background-color: #1e1e1e;
+  }
+  
+  .text-muted-footer {
+    /* Box-model */
+    margin-top: 5px;
+  
+    /* Typography */
+    color: #fff;
+  }
+
+  .footer-text {
+    color: white;
+    margin-top: 8px;
+    font-size: 10px;
+  }
