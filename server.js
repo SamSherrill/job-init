@@ -36,9 +36,10 @@ app.get("*", (req, res) => {
 
 // MONGOOSE ROUTES =================================================
 app.get("/api/users", (req, res) => {
-  db.Workout.find({})
-    .then((dbWorkouts) => {
-      res.json(dbWorkouts);
+  console.log(userData);
+  db.userData.find({})
+    .then((dbUsers) => {
+      res.json(dbUsers);
     })
     .catch((err) => {
       res.json(err);
