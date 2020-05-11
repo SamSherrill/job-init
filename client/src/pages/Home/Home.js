@@ -1,5 +1,4 @@
 import React from "react";
-import stock from "../../img/stock.jpeg";
 import "./Home.css";
 
 const Home = () => {
@@ -17,6 +16,7 @@ const Home = () => {
         </div>
       </div>
       <div className="container">
+          <br></br>
           <br></br>
         <div className="row justify-content-center">
             
