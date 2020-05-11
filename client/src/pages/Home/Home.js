@@ -17,6 +17,7 @@ const Home = () => {
         </div>
       </div>
       <div className="container">
+          <br></br>
         <div className="row justify-content-center">
           <h1 className="display-4" id="brand-format">
             job <span id="brand-two">init</span>
