@@ -5,6 +5,8 @@ class Dashboard extends Component {
   render() {
     return (
       <>
+      <br></br>
+      <div className="container">
         <div className="card">
           <h5 className="card-header">Featured</h5>
           <div className="card-body">
@@ -17,6 +19,7 @@ class Dashboard extends Component {
               Go somewhere
             </a>
           </div>
+        </div>
         </div>
       </>
     );
