@@ -1,0 +1,20 @@
+#home-hero {
+    background: url(../../img/stock.jpeg) no-repeat center center fixed;
+}
+
+#brand-format {
+    font-family: 'Share Tech Mono', monospace;
+    color: #DDDAA9;
+}
+
+#brand-two {
+    color: #D39076
+}
+
+.home-button {
+    background-color: #1E1E1E;
+    color: white;
+    max-width: 100px;
+    min-width: 100px;
+    margin: 15px;
+}
