@@ -1,5 +1,4 @@
 import React from "react";
-import stock from "../../img/stock.jpeg";
 import "./Home.css";
 
 const Home = () => {
@@ -17,13 +16,18 @@ const Home = () => {
         </div>
       </div>
       <div className="container">
+          <br></br>
+          <br></br>
         <div className="row justify-content-center">
+            
           <h1 className="display-4" id="brand-format">
             job <span id="brand-two">init</span>
           </h1>
+          
         </div>
+
         <div className="row justify-content-center">
-          <h6 className="lead">
+          <h6 className="lead blurb">
             Personalized job listings exclusively for junior developers
           </h6>
         </div>
