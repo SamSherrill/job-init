@@ -21,6 +21,10 @@
     color: #D39076
 }
 
+.blurb {
+    margin-top: 10px;
+}
+
 .home-button {
     background-color: #1E1E1E;
     color: white;
