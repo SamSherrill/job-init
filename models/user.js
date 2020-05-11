@@ -17,6 +17,7 @@ const userSchema = new Schema({
     trim: true,
     required: "Your password"
   },
+
   // SKILLS GO HERE, WE MAY WANT TO LIST THEM ALL INDIVIDUALLY AS BOOLEANS
 
 
