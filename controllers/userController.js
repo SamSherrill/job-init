@@ -21,17 +21,20 @@ const db = require("../models");
 //     });
 // });
 
-router.post("/", (req, res) => {
+router.post("/api/users", (req, res) => {
   // Need to pass all of the info into the new user's profile
   // that we can from the front end info
   // Need to add skills
   const email = req.body.email ? req.body.email.trim() : "";
   const password = req.body.password ? req.body.password.trim() : "";
+  const skills = req.body.skills;
 
   if (email && password) {
     db.userData.create({
       email,
-      password
+      password,
+      location,
+      skills
     })
       .then(userResult => {
         res.json(userResult);

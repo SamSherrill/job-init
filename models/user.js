@@ -7,15 +7,19 @@ const userSchema = new Schema({
     type: Number,
     unique: true
   },
-  username: {
+  email: {
     type: String,
     trim: true,
-    required: "Your username"
+    required: "Your email address"
   },
   password: {
     type:  String,
     trim: true,
     required: "Your password"
+  },
+  location: {
+    type: String,
+    trim: true
   },
   skills: {
     html: {
