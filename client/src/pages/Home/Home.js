@@ -32,8 +32,12 @@ const Home = () => {
           </h6>
         </div>
         <div className="row justify-content-center">
-          <button className="btn home-button">Login</button>
-          <button className="btn home-button">Sign Up</button>
+          <a href="/login" className="btn home-button">
+            Login
+          </a>
+          <a href="/signup" className="btn home-button-2">
+            Sign Up
+          </a>
         </div>
       </div>
     </>
