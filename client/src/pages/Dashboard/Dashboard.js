@@ -28,7 +28,7 @@ class Dashboard extends Component {
                 <Card.Text>{result.location}</Card.Text>
                 <hr></hr>
                 <Card.Text>{result.description}</Card.Text>
-                <div className="justify-content-center">
+                <div className="text-center">
                   <a href={result.link}>
                     <Button className="btn listing-button ">
                       Full Job Listing
