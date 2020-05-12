@@ -7,7 +7,6 @@ function Login() {
   return (
     <Form
       className="container mt-5 login-form"
-      //   style={{ border: "2px solid gray", padding: "30px" }}
     >
       <Form.Group controlId="formBasicEmail">
         <Form.Label>Email address</Form.Label>
