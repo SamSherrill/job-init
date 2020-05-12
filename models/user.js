@@ -17,9 +17,33 @@ const userSchema = new Schema({
     trim: true,
     required: "Your password"
   },
-
-  // SKILLS GO HERE, WE MAY WANT TO LIST THEM ALL INDIVIDUALLY AS BOOLEANS
-
+  html: {
+    type: Boolean
+  },
+  css: {
+    type: Boolean
+  },
+  javascript: {
+    type: Boolean
+  },
+  react: {
+    type: Boolean
+  },
+  node: {
+    type: Boolean
+  },
+  express: {
+    type: Boolean
+  },
+  mysql: {
+    type: Boolean
+  },
+  mongodb: {
+    type: Boolean
+  },
+  pwa: {
+    type: Boolean
+  }
 
 // === MAYBE USEFUL IF WE WANT TO ONLY SHOW NEW JOBS LATER ========
 //   date: {
