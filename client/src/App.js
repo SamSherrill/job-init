@@ -12,7 +12,7 @@ import Dashboard from "./pages/Dashboard/Dashboard"
 function App() {
   return (
     <Router>
-      <div>
+      <div className="content">
         <Navbar />
         <Switch>
           <Route exact path="/" component={Home} />
