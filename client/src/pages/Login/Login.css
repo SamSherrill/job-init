@@ -1,0 +1,31 @@
+/* @media all and (min-width: 480px) {
+  .Login {
+    padding: 60px 0;
+  }
+
+  .Login form {
+    margin: 0 auto;
+    max-width: 320px;
+  }
+} */
+
+.login-form {
+    widows: 100%;
+    max-width: 530px;
+    padding: 85px;
+    margin:auto;
+    height: 100%;
+    background-color: #faf9f8
+}
+.login-button {
+    color: white;
+    height: 50px;
+    background-color: rgb(219, 216, 159);;
+    font-weight: bold;
+    border-color: rgb(219, 216, 159);
+     text-shadow: -1px 1px 10px #000;
+    
+}
+.email-height {
+    height:50px;
+}
