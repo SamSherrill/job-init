@@ -36,6 +36,7 @@ app.get("*", (req, res) => {
 //==================================================================
 
 // MONGOOSE ROUTES =================================================
+// Later we'll pull these routes into a routes folder, and then require the routes
 app.get("/api/users", (req, res) => {
   console.log(userData);
   db.userData.find({})
@@ -47,7 +48,15 @@ app.get("/api/users", (req, res) => {
     });
 });
 
-
+app.post("/api/users", (req, res) => {
+  db.userData.create(req.body)
+    .then((dbUsers) => {
+      res.json(dbUsers);
+    })
+    .catch(err => {
+      res.status(500).json(err);
+    });
+});
 //==================================================================
 
 app.listen(PORT, () => {
