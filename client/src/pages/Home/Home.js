@@ -31,7 +31,7 @@ const Home = () => {
           <a href="/login" className="btn home-button">
             Login
           </a>
-          <a href="/signup" className="btn home-button">
+          <a href="/signup" className="btn home-button-2">
             Sign Up
           </a>
         </div>
