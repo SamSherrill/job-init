@@ -4,15 +4,6 @@ import Form from "react-bootstrap/Form";
 import Button from "react-bootstrap/Button";
 import InputGroup from "react-bootstrap/InputGroup";
 import FormControl from "react-bootstrap/FormControl";
-// import FormCheck from "react-bootstrap/FormCheck";
-
-// const FormPage = () => {
-//   return (
-//       <div>SignUp</div>
-//   );
-// };
-
-// export default FormPage;
 
 const renderSkills = (someSkills, startIdx, endIdx) => (
   <div className="row" key={startIdx}>
@@ -87,7 +78,7 @@ function SignUp() {
       </InputGroup>
 
       <div className="mb-3 text-center">
-        <h3 className="h3">Skills</h3>
+        <h3 className="h3 skills-text">Skills</h3>
       </div>
       {renderSkills(skills, 0, 3)}
       {renderSkills(skills, 3, 6)}

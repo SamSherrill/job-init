@@ -3,25 +3,33 @@ import "./Home.css";
 import Hero from "../../img/hero-video.mov";
 import { Link } from "react-router-dom";
 
+const styles = {
+  video: {
+    width: "100vw",
+  },
+  videoContainer: {
+    height: "100%",
+    overflow: "hidden",
+  },
+};
 const Home = () => {
-
-  // function hero() {
-  //   $("#video").click(function() {
-  //     var Video1 = $("#my_video_1").get(0);
-  //     Video1.play();
-  // });
-  // }
   return (
     <>
       <div class="home-hero">
-        {/* <div id="video">
-    <video id="my_video_1" class="video-js vjs-default-skin" 
-     preload="auto" width="501" height="282" poster={Hero} onclick="this.play();"controls
-     data-setup="{}">
-     <source src="video/final.webm" type='video/webm'/>
-     <source src="video/final.mp4" type='video/mp4'/>
-    </video>
-      </div> */}
+        <div style={styles.videoContainer} id="video">
+          <video
+            autoPlay
+            loop
+            id="my_video_1"
+            class="video-js"
+            preload="auto"
+            data-setup="{}"
+            style={styles.video}
+          >
+            <source src={Hero} type="video/mp4" />
+          </video>
+        </div>
+
         <div className="container">
           <div className="row">
             <div className="col"></div>
