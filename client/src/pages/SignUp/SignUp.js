@@ -5,6 +5,7 @@ import Button from "react-bootstrap/Button";
 import InputGroup from "react-bootstrap/InputGroup";
 import FormControl from "react-bootstrap/FormControl";
 
+
 const renderSkills = (someSkills, startIdx, endIdx) => (
   <div className="row" key={startIdx}>
     {someSkills.slice(startIdx, endIdx).map((skill, idx) => (
@@ -37,6 +38,8 @@ function SignUp() {
 
   return (
     <Form className="container mt-5 login-form">
+      <h3>Create Your Free Profile Today!</h3>
+      <br></br>
       <Form.Group controlId="formBasicName">
         <Form.Control
           className="name-height"
