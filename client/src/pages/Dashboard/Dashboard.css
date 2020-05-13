@@ -21,11 +21,13 @@
 }
 
 .listing-button:hover {
-    background-color: lightgrey
+    color: black;
+    background-color: rgb(219, 216, 159);
 }
 
 .save-button:hover {
-    background-color: lightgrey
+  color: black;
+  background-color: #d39076;
 }
 
 .save-button {
