@@ -2,6 +2,9 @@ import React from "react";
 import "./SignUp.css";
 import Form from "react-bootstrap/Form";
 import Button from "react-bootstrap/Button";
+import InputGroup from "react-bootstrap/InputGroup";
+import FormControl from "react-bootstrap/FormControl";
+// import FormCheck from "react-bootstrap/FormCheck";
 
 // const FormPage = () => {
 //   return (
@@ -11,11 +14,39 @@ import Button from "react-bootstrap/Button";
 
 // export default FormPage;
 
+const renderSkills = (someSkills, startIdx, endIdx) => (
+  <div className="row" key={startIdx}>
+    {someSkills.slice(startIdx, endIdx).map((skill, idx) => (
+      <div className="col-4" key={idx}>
+        <Form.Check
+          custom
+          inline
+          label={skill}
+          type="checkbox"
+          id={`id-${skill}`}
+          className="mb-3"
+        />
+      </div>
+    ))}
+  </div>
+);
+
 function SignUp() {
+  const skills = [
+    "Html",
+    "CSS",
+    "JavaScript",
+    "NodeJS",
+    "Express",
+    "MySQL",
+    "MongoDB",
+    "PWA",
+    "React",
+  ];
+
   return (
     <Form className="container mt-5 login-form">
       <Form.Group controlId="formBasicName">
-        <Form.Label></Form.Label>
         <Form.Control
           className="name-height"
           type="name"
@@ -25,7 +56,6 @@ function SignUp() {
       </Form.Group>
 
       <Form.Group controlId="formBasicLast">
-        {/* <Form.Label></Form.Label> */}
         <Form.Control
           className="name-height"
           type="last"
@@ -34,7 +64,6 @@ function SignUp() {
       </Form.Group>
 
       <Form.Group controlId="formBasicEmail">
-        {/* <Form.Label></Form.Label> */}
         <Form.Control
           className="name-height"
           type="Email"
@@ -43,7 +72,6 @@ function SignUp() {
       </Form.Group>
 
       <Form.Group controlId="formBasicPassword">
-        {/* <Form.Label></Form.Label> */}
         <Form.Control
           className="name-height"
           type="last"
@@ -51,16 +79,21 @@ function SignUp() {
         />
       </Form.Group>
 
-      <Form.Group controlId="formBasicLocation">
-        {/* <Form.Label></Form.Label> */}
-        <Form.Control
-          className="name-height"
-          type="last"
-          placeholder="Location"
-        />
-      </Form.Group>
+      <InputGroup className="mb-3">
+        <FormControl aria-label="Text input with checkbox" />
+        <InputGroup.Prepend>
+          <InputGroup.Checkbox aria-label="Checkbox for following text input" />
+        </InputGroup.Prepend>
+      </InputGroup>
+
+      <div className="mb-3 text-center">
+        <h3 className="h3">Skills</h3>
+      </div>
+      {renderSkills(skills, 0, 3)}
+      {renderSkills(skills, 3, 6)}
+      {renderSkills(skills, 6, 9)}
       <Button className="btn-lg btn-dark btn-block login-button">
-        Sign up
+        Sign Up
       </Button>
     </Form>
   );
