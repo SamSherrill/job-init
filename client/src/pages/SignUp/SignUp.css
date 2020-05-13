@@ -1,12 +1,12 @@
- .name-height {
- widows: 100%;
-    max-width: 530px;
-    padding: 10px;
-    margin:auto;
-    height: 100%;
-    background-color: #faf9f8
- }
- /* .skills-text { */
-    /* color:#d39076; */
-    /* text-shadow: -1px 1px 1px #000; */
- /* } */
+.name-height {
+  widows: 100%;
+  max-width: 530px;
+  padding: 10px;
+  margin: auto;
+  height: 100%;
+  background-color: #faf9f8;
+}
+.skills-text {
+  color: #d39076;
+  text-shadow: -1px 1px 1px #000;
+}
