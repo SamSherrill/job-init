@@ -1,0 +1,8 @@
+ .name-height {
+ widows: 100%;
+    max-width: 530px;
+    padding: 10px;
+    margin:auto;
+    height: 100%;
+    background-color: #faf9f8
+ }
