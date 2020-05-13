@@ -17,7 +17,7 @@ const Home = () => {
       <div class="home-hero">
         <div style={styles.videoContainer} id="video">
           <video
-            autoPlay
+            autoPlay muted
             loop
             id="my_video_1"
             class="video-js"
