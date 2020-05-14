@@ -1,6 +1,7 @@
 import React from "react";
 import "./Home.css";
 import Hero from "../../img/hero-video.mov";
+import { Link } from "react-router-dom";
 
 const styles = {
   video: {
@@ -50,12 +51,12 @@ const Home = () => {
           </h6>
         </div>
         <div className="row justify-content-center">
-          <a href="/login" className="btn home-button">
+          <Link to="/login" className="btn home-button">
             Login
-          </a>
-          <a href="/signup" className="btn home-button-2">
+          </Link>
+          <Link to="/signup" className="btn home-button-2">
             Sign Up
-          </a>
+          </Link>
         </div>
       </div>
     </>

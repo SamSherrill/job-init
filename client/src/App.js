@@ -8,18 +8,20 @@ import Login from "./pages/Login/Login";
 import SignUp from "./pages/SignUp/SignUp";
 import NoMatch from "./pages/NoMatch/NoMatch";
 import Dashboard from "./pages/Dashboard/Dashboard"
+import UserAccount from "./pages/UserAccount/UserAccount";
 
 function App() {
   return (
     <Router>
-      <div>
+      <div className="content">
         <Navbar />
         <Switch>
           <Route exact path="/" component={Home} />
           <Route exact path="/home" component={Home} />
           <Route exact path="/login" component={Login} />
           <Route exact path="/signup" component={SignUp} />
-          <Route exact path="/dashboard" component={Dashboard} />
+          <Route exact path="/signup" component={SignUp} />
+          <Route exact path="/user" component={UserAccount} />
           <Route component={NoMatch} />
         </Switch>
         <Footer />

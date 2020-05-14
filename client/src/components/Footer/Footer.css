@@ -1,6 +1,6 @@
 .footer {
     /* Positioning */
-    position: absolute;
+    position: fixed;
     bottom: 0;
   
     /* Box-model */
@@ -9,6 +9,8 @@
   
     /* Visual */
     background-color: #1e1e1e;
+
+    flex-shrink: 0;
   }
   
   .text-muted-footer {
