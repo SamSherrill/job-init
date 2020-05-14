@@ -118,7 +118,7 @@ class SignUp extends Component {
         </InputGroup>
 
         <div className="mb-3 text-center">
-          <h3 className="h3">Skills</h3>
+          <h3 className="h3 skills-text">Skills</h3>
         </div>
         {/* <div className="col-4">
           <Form.Check
@@ -136,7 +136,10 @@ class SignUp extends Component {
         {this.renderSkills(skills, 0, 3)}
         {this.renderSkills(skills, 3, 6)}
         {this.renderSkills(skills, 6, 9)}
-        <Button onClick={this.handleFormSubmit} className="btn-lg btn-dark btn-block login-button">
+        <Button
+          onClick={this.handleFormSubmit}
+          className="btn-lg btn-dark btn-block login-button"
+        >
           Sign Up
         </Button>
       </Form>

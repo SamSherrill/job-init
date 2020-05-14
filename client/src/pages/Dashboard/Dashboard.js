@@ -3,6 +3,7 @@ import results from "../../results.json";
 import "./Dashboard.css";
 import Button from "react-bootstrap/Button";
 import Card from "react-bootstrap/Card";
+import { Link } from "react-router-dom";
 
 class Dashboard extends Component {
   state = {
@@ -29,11 +30,11 @@ class Dashboard extends Component {
                 <hr></hr>
                 <Card.Text>{result.description}</Card.Text>
                 <div className="text-center">
-                  <a href={result.link}>
+                  <Link to={result.link}>
                     <Button className="btn listing-button ">
                       Full Job Listing
                     </Button>
-                  </a>
+                  </Link>
                   <Button className="btn save-button">Save Job</Button>
                 </div>
               </Card.Body>
