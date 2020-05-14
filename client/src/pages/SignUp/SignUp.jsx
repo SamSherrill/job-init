@@ -4,6 +4,7 @@ import Form from "react-bootstrap/Form";
 import Button from "react-bootstrap/Button";
 import InputGroup from "react-bootstrap/InputGroup";
 import FormControl from "react-bootstrap/FormControl";
+import axios from "axios";
 
 const skills = [
   "HTML",
@@ -26,10 +27,19 @@ class SignUp extends Component {
       }),
       {}
     ),
+    firstName: "",
+    lastName: "",
+    email: "",
+    password: "",
+    location: "",
   };
-  //   Form = ({ error, handleCheckboxChange }) => {
-  //       const [HTML, setHTML] = useState(false)
-  //   };
+
+  handleInputChange = (event) => {
+    const { name, value } = event.target;
+    this.setState({
+      [name]: value,
+    });
+  };
 
   handleCheckboxChange = (changeEvent) => {
     const { name } = changeEvent.target;
@@ -43,13 +53,53 @@ class SignUp extends Component {
     }));
   };
 
-  handleFormSubmit = (formSubmitEvent) => {
+  // Jonathan did this in a functional component. We're in a class component
+  // We'll need to adjust accordingly for a class component
+  // const [email, setEmail] = useState("");
+  // const [password, setPassword] = useState("");
+  // <Input
+  //             id="password"
+  //             type="password"
+  //             name="password"
+  //             value={password}
+  //             label="Password"
+  //             handleChange={(e) => setPassword(e.target.value)}
+  //           />
+
+  handleFormSubmit = (
+    formSubmitEvent,
+    firstName,
+    lastName,
+    email,
+    password,
+    location
+  ) => {
     formSubmitEvent.preventDefault();
+    console.log(
+      `formSubmitEvent (and logged below): ${formSubmitEvent}, firstName: ${this.state.firstName}, lastName: ${this.state.lastName},
+      email: ${this.state.email}, password: ${this.state.password}, location: ${this.state.location}, skills: ${this.state.checkboxes}`
+    );
+    console.log(formSubmitEvent);
 
     Object.keys(this.state.checkboxes)
       .filter((checkbox) => this.state.checkboxes[checkbox])
       .forEach((checkbox) => {
         console.log(checkbox, "is selected.");
+      });
+
+    axios
+      .post("/api/users", {
+        firstName,
+        lastName,
+        email,
+        password,
+        location,
+      })
+      .then((result) => {
+        console.log(result);
+      })
+      .catch((err) => {
+        console.log(err);
       });
   };
 
@@ -80,8 +130,11 @@ class SignUp extends Component {
         <Form.Group controlId="formBasicName">
           <Form.Control
             className="name-height"
-            type="name"
+            type="firstName"
             placeholder="First Name"
+            name="firstName"
+            value={this.state.firstName}
+            onChange = {this.handleInputChange}
           />
           <Form.Text className="text-muted"></Form.Text>
         </Form.Group>
@@ -89,33 +142,46 @@ class SignUp extends Component {
         <Form.Group controlId="formBasicLast">
           <Form.Control
             className="name-height"
-            type="last"
+            type="lastName"
             placeholder="Last Name"
+            name="lastName"
+            value={this.state.lastName}
+            onChange = {this.handleInputChange}
           />
         </Form.Group>
 
         <Form.Group controlId="formBasicEmail">
           <Form.Control
             className="name-height"
-            type="Email"
+            type="email"
             placeholder="Email Address"
+            name="email"
+            value={this.state.email}
+            onChange = {this.handleInputChange}
           />
         </Form.Group>
 
         <Form.Group controlId="formBasicPassword">
           <Form.Control
             className="name-height"
-            type="last"
+            type="password"
             placeholder="Password"
+            name="password"
+            value={this.state.password}
+            onChange = {this.handleInputChange}
           />
         </Form.Group>
 
-        <InputGroup className="mb-3">
-          <FormControl aria-label="Text input with checkbox" />
-          <InputGroup.Prepend>
-            <InputGroup.Checkbox aria-label="Checkbox for following text input" />
-          </InputGroup.Prepend>
-        </InputGroup>
+        <Form.Group controlId="formBasicLocation">
+          <Form.Control
+            className="name-height"
+            type="location"
+            placeholder="Location"
+            name="location"
+            value={this.state.location}
+            onChange = {this.handleInputChange}
+          />
+        </Form.Group>
 
         <div className="mb-3 text-center">
           <h3 className="h3 skills-text">Skills</h3>
