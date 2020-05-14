@@ -76,10 +76,11 @@ class SignUp extends Component {
   ) => {
     formSubmitEvent.preventDefault();
     console.log(
-      `formSubmitEvent (and logged below): ${formSubmitEvent}, firstName: ${this.state.firstName}, lastName: ${this.state.lastName},
-      email: ${this.state.email}, password: ${this.state.password}, location: ${this.state.location}, skills: ${this.state.checkboxes}`
+      `formSubmitEvent (and logged directly below): ${formSubmitEvent}, firstName: ${this.state.firstName}, lastName: ${this.state.lastName},
+      email: ${this.state.email}, password: ${this.state.password}, location: ${this.state.location}, checkboxes (and logged 2 lines down): ${this.state.checkboxes}`
     );
     console.log(formSubmitEvent);
+    console.log(this.state.checkboxes);
 
     Object.keys(this.state.checkboxes)
       .filter((checkbox) => this.state.checkboxes[checkbox])
@@ -89,11 +90,12 @@ class SignUp extends Component {
 
     axios
       .post("/api/users", {
-        firstName,
-        lastName,
-        email,
-        password,
-        location,
+        firstName: this.state.firstName,
+        lastName: this.state.lastName,
+        email: this.state.email,
+        password: this.state.password,
+        location: this.state.location,
+        
       })
       .then((result) => {
         console.log(result);
