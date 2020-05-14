@@ -15,7 +15,7 @@ const styles = {
 const Home = () => {
   return (
     <>
-      <div class="home-hero">
+      <div className="home-hero">
         <div style={styles.videoContainer} id="video">
           <video
             autoPlay muted
