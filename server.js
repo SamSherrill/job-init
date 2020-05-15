@@ -1,12 +1,10 @@
-console.log("server is starting");
-
 require("dotenv").config();
 const express = require("express");
 const path = require("path");
 const db = require("./models");
-const userData = require("./models/user.js");
+// const userData = require("./models/user.js");
 const mongoose = require("mongoose");
-const testController = require("./controllers/testController");
+const TestController = require("./controllers/testController");
 
 const PORT = process.env.PORT || 3001;
 
@@ -14,6 +12,7 @@ const app = express();
 
 mongoose.connect(process.env.MONGODB_URI || "mongodb://localhost/userData", {
   useNewUrlParser: true,
+  useUnifiedTopology: true,
 });
 
 app.use(express.urlencoded({ extended: true }));
@@ -26,38 +25,36 @@ app.get("/api/config", (req, res) => {
   });
 });
 
-
-
-app.use("/api/test", testController);
+app.use("/api/test", TestController);
 
 // MONGOOSE ROUTES =================================================
 // Later we'll pull these routes into a routes folder, and then require the routes
-app.get("/api/users", (req, res) => {
-  console.log(userData);
-  db.userData
-    .find({})
-    .then((dbUsers) => {
-      res.json(dbUsers);
-    })
-    .catch((err) => {
-      res.json(err);
-    });
-});
+// app.get("/api/users", (req, res) => {
+//   console.log(userData);
+//   db.userData
+//     .find({})
+//     .then((dbUsers) => {
+//       res.json(dbUsers);
+//     })
+//     .catch((err) => {
+//       res.json(err);
+//     });
+// });
 
 // app.use("/api/users", userController);
-app.post("/api/users", (req, res) => {
-  console.log("Hit the post route");
-  console.log(req.body);
-  db.userData
-    .create(req.body)
-    .then((dbUsers) => {
-      res.json(dbUsers);
-    })
-    .catch((err) => {
-      console.log(err);
-      res.status(500).json(err);
-    });
-});
+// app.post("/api/users", (req, res) => {
+//   console.log("Hit the post route");
+//   console.log(req.body);
+//   db.userData
+//     .create(req.body)
+//     .then((dbUsers) => {
+//       res.json(dbUsers);
+//     })
+//     .catch((err) => {
+//       console.log(err);
+//       res.status(500).json(err);
+//     });
+// });
 //==================================================================
 
 // API ROUTES ======================================================
@@ -65,7 +62,7 @@ app.post("/api/users", (req, res) => {
 // api key --    0f4b8fc49b430d828c3c2a0b28246429
 // sample endpoint --   https://api.adzuna.com/v1/api/jobs/us/search/1?app_id=e61b06cb&app_key=0f4b8fc49b430d828c3c2a0b28246429&results_per_page=20&what=javascript%20developer&content-type=application/json
 
-// HTML ROUTES ====================================================
+// React ROUTES ====================================================
 app.use(express.static("client/build"));
 
 app.get("*", (req, res) => {
