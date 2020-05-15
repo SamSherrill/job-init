@@ -1,13 +1,52 @@
 import React, { Component } from "react";
-import results from "../../results.json";
+// import results from "../../results.json";
 import "./Dashboard.css";
 import Button from "react-bootstrap/Button";
 import Card from "react-bootstrap/Card";
 import { Link } from "react-router-dom";
+import axios from "axios";
 
 class Dashboard extends Component {
   state = {
-    results,
+    jobResults: []
+  };
+
+  // getJobResult = () => {
+  //   axios
+  //     .get(`https://api.adzuna.com/v1/api/jobs/us/search/1?app_id=e61b06cb&app_key=0f4b8fc49b430d828c3c2a0b28246429&results_per_page=20&what=javascript%20developer&content-type=application/json`)
+  //     .then((response) => {
+  //       console.log(response);
+  //       if (response.data && response.data.success && response.data.data) {
+  //         this.setState({
+  //           jobResults: response.data.data,
+  //         });
+  //       } else {
+  //         this.setState({
+  //           error: response.data.message,
+  //         });
+  //       }
+  //     })
+  //     .catch((err) => {
+  //       console.log(err);
+  //     });
+  // };
+
+  componentDidMount() {
+    this.getJobResult();
+  }
+
+  getJobResult = () => {
+    axios
+      .get(`https://api.adzuna.com/v1/api/jobs/us/search/1?app_id=e61b06cb&app_key=0f4b8fc49b430d828c3c2a0b28246429&results_per_page=20&what=javascript%20developer&content-type=application/json`)
+      .then((response) => {
+        console.log(response.data.results);
+          this.setState({
+            jobResults: response.data.results,
+          });
+      })
+      .catch((err) => {
+        console.log(err);
+      });
   };
 
   render() {
@@ -19,18 +58,20 @@ class Dashboard extends Component {
         </div>
 
         <div className="container">
-          {this.state.results.map((result) => (
-            <Card className="result-card">
+          {this.state.jobResults.map((result) => (
+            <Card className="result-card" key={result.id}>
               <Card.Header as="h5" className="feature-bar">
-                {result.title}
+                <div dangerouslySetInnerHTML={{__html:result.title}}></div>
+                {/* {result.title.replace("<strong>", "").replace("</strong>", "").replace("<strong>", "").replace("</strong>", "")} */}
               </Card.Header>
               <Card.Body>
-                <Card.Title>{result.company}</Card.Title>
-                <Card.Text>{result.location}</Card.Text>
+                <Card.Title>{result.company.display_name}</Card.Title>
+                <Card.Text>{result.location.display_name}</Card.Text>
                 <hr></hr>
-                <Card.Text>{result.description}</Card.Text>
+                <Card.Text>
+                <span dangerouslySetInnerHTML={{__html:result.description}}></span></Card.Text>
                 <div className="text-center">
-                  <Link to={result.link}>
+                  <Link to={result.redirect_url}>
                     <Button className="btn listing-button ">
                       Full Job Listing
                     </Button>
