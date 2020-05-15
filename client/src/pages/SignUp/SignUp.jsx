@@ -82,6 +82,7 @@ class SignUp extends Component {
     );
     console.log(formSubmitEvent);
     console.log(this.state.checkboxes);
+    
 
     Object.keys(this.state.checkboxes)
       .filter((checkbox) => this.state.checkboxes[checkbox])
@@ -96,7 +97,7 @@ class SignUp extends Component {
         email: this.state.email,
         password: this.state.password,
         location: this.state.location,
-        
+        skills: this.state.checkboxes
       })
       .then((result) => {
         console.log(result);
@@ -198,19 +199,6 @@ class SignUp extends Component {
         <div className="mb-3 text-center">
           <h3 className="h3 skills-text">skills</h3>
         </div>
-        {/* <div className="col-4">
-          <Form.Check
-            onChange={this.handleCheckboxChange}
-            custom
-            inline
-            label="HTML"
-            type="checkbox"
-            id={`id-html`}
-            className="mb-3"
-            name="HTML"
-            checked={this.state.checkboxes[0].checked}
-          />
-        </div> */}
         <div className="skills-checks">
         {this.renderSkills(skills, 0, 3)}
         {this.renderSkills(skills, 3, 6)}

@@ -28,31 +28,31 @@ const userSchema = new Schema({
     trim: true
   },
   skills: {
-    html: {
+    HTML: {
       type: Boolean
     },
-    css: {
+    CSS: {
       type: Boolean
     },
-    javascript: {
+    JavaScript: {
       type: Boolean
     },
-    react: {
+    NodeJS: {
       type: Boolean
     },
-    node: {
+    Express: {
       type: Boolean
     },
-    express: {
+    MySQL: {
       type: Boolean
     },
-    mysql: {
+    MongoDB: {
       type: Boolean
     },
-    mongodb: {
+    PWA: {
       type: Boolean
     },
-    pwa: {
+    React: {
       type: Boolean
     }
   }
