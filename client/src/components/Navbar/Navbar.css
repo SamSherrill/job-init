@@ -4,7 +4,7 @@
 }
 
 #brand-two {
-    color: #D39076
+    color: #D39076;
 }
 
 .job-nav {
@@ -14,4 +14,8 @@
 .nav-link-job {
     color: white;
     font-family: 'Share Tech Mono', monospace;
+}
+
+.nav-link-job:hover {
+    color: lightgray
 }

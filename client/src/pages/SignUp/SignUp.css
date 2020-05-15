@@ -9,4 +9,11 @@
 .skills-text {
   color: #d39076;
   text-shadow: -1px 1px 1px #000;
+  font-family: "Share Tech Mono", monospace;
 }
+
+.signup-card {
+  margin-top: 50px;
+  width: 60%;
+}
+

@@ -8,6 +8,7 @@ import Login from "./pages/Login/Login";
 import SignUp from "./pages/SignUp/SignUp";
 import NoMatch from "./pages/NoMatch/NoMatch";
 import Dashboard from "./pages/Dashboard/Dashboard"
+import UserAccount from "./pages/UserAccount/UserAccount";
 
 function App() {
   return (
@@ -20,6 +21,7 @@ function App() {
           <Route exact path="/login" component={Login} />
           <Route exact path="/signup" component={SignUp} />
           <Route exact path="/dashboard" component={Dashboard} />
+          <Route exact path="/account" component={UserAccount} />
           <Route component={NoMatch} />
         </Switch>
         <Footer />

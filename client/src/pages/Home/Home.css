@@ -11,6 +11,7 @@
   text-shadow: -1px 1px 2px #000;
   font-family: "Share Tech Mono", monospace;
   color: #dddaa9;
+  background: -webkit-linear-gradient(black, 333);
 }
 
 #brand-two {

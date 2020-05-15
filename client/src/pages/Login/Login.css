@@ -11,21 +11,42 @@
 
 .login-form {
     widows: 100%;
-    max-width: 530px;
-    padding: 85px;
     margin:auto;
     height: 100%;
-    background-color: #faf9f8
+    background-color: white;
+
 }
 .login-button {
     color: white;
     height: 50px;
-    background-color: rgb(219, 216, 159);;
+    background-color: rgb(219, 216, 159);
     font-weight: bold;
-    border-color: rgb(219, 216, 159);
+    border: none;
     text-shadow: -1px 1px 10px #000;
-    
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19); 
+    margin-bottom: 20px;
 }
+
+.login-button:hover {
+  color: black;
+  background-color: rgb(219, 216, 159);
+  border: none;
+}
+
 .email-height {
     height:50px;
+}
+
+.signup-card {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  margin-bottom: 60px;
+}
+
+.form-bar {
+  font-family: "Share Tech Mono", monospace;
+}
+
+.skills-checks {
+  margin-left: 55px;
+
 }
