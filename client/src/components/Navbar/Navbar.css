@@ -10,3 +10,8 @@
 .job-nav {
     background-color: #1e1e1e;
 }
+
+.nav-link-job {
+    color: white;
+    font-family: 'Share Tech Mono', monospace;
+}
