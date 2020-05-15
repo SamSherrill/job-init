@@ -5,6 +5,7 @@ const db = require("./models");
 // const userData = require("./models/user.js");
 const mongoose = require("mongoose");
 const TestController = require("./controllers/testController");
+const UserController = require("./controllers/userController");
 
 const PORT = process.env.PORT || 3001;
 
@@ -26,6 +27,7 @@ app.get("/api/config", (req, res) => {
 });
 
 app.use("/api/test", TestController);
+app.use("/api/users", UserController);
 
 // MONGOOSE ROUTES =================================================
 // Later we'll pull these routes into a routes folder, and then require the routes
