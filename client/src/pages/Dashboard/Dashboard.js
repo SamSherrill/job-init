@@ -54,11 +54,11 @@ class Dashboard extends Component {
                   ></span>
                 </Card.Text>
                 <div className="text-center">
-                  <Link to={result.redirect_url}>
+                  <a href={result.redirect_url}>
                     <Button className="btn listing-button ">
                       Full Job Listing
                     </Button>
-                  </Link>
+                  </a>
                   <Button className="btn save-button">Save Job</Button>
                 </div>
               </Card.Body>
