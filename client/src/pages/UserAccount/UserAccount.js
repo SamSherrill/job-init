@@ -27,7 +27,6 @@ function UserAccount() {
   const skills = [
 
     "HTML",
-
     "CSS",
     "JavaScript",
     "NodeJS",
