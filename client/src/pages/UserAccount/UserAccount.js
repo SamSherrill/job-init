@@ -25,7 +25,9 @@ const renderSkills = (someSkills, startIdx, endIdx) => (
 
 function UserAccount() {
   const skills = [
+
     "HTML",
+
     "CSS",
     "JavaScript",
     "NodeJS",
