@@ -6,7 +6,7 @@ const path = require("path");
 const db = require("./models");
 // we may not need to do both of these things above & below
 const userData = require("./models/user.js");
-const userController = require("./controllers/userController.js");
+// const userController = require("./controllers/userController.js");
 const mongoose = require("mongoose");
 
 const PORT = process.env.PORT || 3001;
