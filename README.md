@@ -4,7 +4,7 @@
 * [Overview](#Overview)  
 * [User Story](#user-Story)   
 * [Features](#Features)  
-* [Instructions for Use](#Instructions-for-Use)  
+* [How to Use](#How-to-Use)  
 * [Links](#Links) 
 * [Deployment](#Deployment) 
 * [Credits](#Credits) 
@@ -13,13 +13,20 @@
 
 ## Overview
 
-Describe it here
+This App is a Job Board application specifically for Junior Web Dev positions to Aggregate job listings via Open Skills API. 
+User can log in and save searches/skills/preferences.
+
+This App is different from other job listings sites by specifically:
+* Having jobs for junior developer positions only
+* Aggregates jobs from multiple sites
+* Market to recent boot camp grads
+* Utility addresses the problem of graduates overwhelmed by job postings
 
 ![app preview screenshot](#)
 
 ## User Story
 
-User story here
+As a user I WANT to input my skills and job preferences SO THAT i can receive personalized jobs openings.
 
 ## Features
 
@@ -31,11 +38,13 @@ Describe features & include screenshots
 
 ![example of #####](#)
 
-## Instructions for Use
-What things you need to install the software and how to install them
-```
-Give examples
-```
+## How to Use
+1. Open the page and either login if you already have an account or sign up if you are a new user,
+
+2. To sign up, simply click sign up button in home page and this will take you to sign up page so that you are able to create an account. Type in first Name, Last Name, Email Address, Password and Location. Choose your skills and click "Sign Up",
+
+3. Once you create an account, You will now be on your dashboard and your search will be based on your skills that you have chosen in the Sign up page.
+
 ## Links
 
 Deployed app: [https://job-int.herokuapp.com/](https://job-int.herokuapp.com/)
@@ -48,7 +57,7 @@ Add additional notes about how to deploy this on a live system
 
 ## Credits
 
-contributors who participated in this project.
+SamSherrill,smithse4,jguerra21,fmiusov
 
 ## License
 
