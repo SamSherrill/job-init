@@ -21,7 +21,7 @@ const Home = () => {
             autoPlay muted
             loop
             id="my_video_1"
-            class="video-js"
+            className="video-js"
             preload="auto"
             data-setup="{}"
             style={styles.video}
