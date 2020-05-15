@@ -3,10 +3,18 @@ import "./Login.css";
 import Form from "react-bootstrap/Form";
 import Button from "react-bootstrap/Button";
 // import { Link } from "react-router-dom";
+import Card from "react-bootstrap/Card";
 
 function Login() {
   return (
-    
+    <>
+    <div className="container">
+    <div className="row justify-content-center">
+    <Card className="signup-card">
+            <Card.Header as="h5" className="feature-bar form-bar">
+              login
+            </Card.Header>
+            <Card.Body>
     <Form
       className="container mt-5 login-form"
     >
@@ -31,7 +39,12 @@ function Login() {
       
       <Button className="btn-lg btn-dark btn-block login-button">Login</Button>
     </Form>
+    </Card.Body>
+        </Card>
+        </div>
+        </div>
 
+      </>
   );
 }
 

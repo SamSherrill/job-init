@@ -35,7 +35,7 @@ class Dashboard extends Component {
       <>
         <br></br>
         <div className="container">
-          <h4 className="dash-heading">Custom Job Listings</h4>
+          <h4 className="text-center dash-heading">custom job listings</h4>
         </div>
 
         <div className="container">

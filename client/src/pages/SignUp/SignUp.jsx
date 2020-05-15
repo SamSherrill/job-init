@@ -5,6 +5,7 @@ import Button from "react-bootstrap/Button";
 import InputGroup from "react-bootstrap/InputGroup";
 import FormControl from "react-bootstrap/FormControl";
 import axios from "axios";
+import Card from "react-bootstrap/Card";
 
 const skills = [
   "HTML",
@@ -128,6 +129,15 @@ class SignUp extends Component {
 
   render() {
     return (
+      <>
+      <div className="container">
+        <div className="row justify-content-center">
+          
+      <Card className="signup-card">
+              <Card.Header as="h5" className="feature-bar form-bar">
+                sign up
+              </Card.Header>
+              <Card.Body>
       <Form className="container mt-5 login-form">
         <Form.Group controlId="formBasicName">
           <Form.Control
@@ -186,7 +196,7 @@ class SignUp extends Component {
         </Form.Group>
 
         <div className="mb-3 text-center">
-          <h3 className="h3 skills-text">Skills</h3>
+          <h3 className="h3 skills-text">skills</h3>
         </div>
         {/* <div className="col-4">
           <Form.Check
@@ -201,16 +211,25 @@ class SignUp extends Component {
             checked={this.state.checkboxes[0].checked}
           />
         </div> */}
+        <div className="skills-checks">
         {this.renderSkills(skills, 0, 3)}
         {this.renderSkills(skills, 3, 6)}
         {this.renderSkills(skills, 6, 9)}
+        </div>
+
         <Button
           onClick={this.handleFormSubmit}
           className="btn-lg btn-dark btn-block login-button"
         >
           Sign Up
         </Button>
-      </Form>
+        </Form>
+        </Card.Body>
+        </Card>
+        </div>
+        </div>
+
+      </>
     );
   }
 }

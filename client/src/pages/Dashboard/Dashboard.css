@@ -1,11 +1,13 @@
 .result-card {
-  margin-bottom: 10px;
+  margin-bottom: 60px;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 
 .dash-heading {
-    font-family: "Share Tech Mono", monospace;
-    text-shadow: -1px 1px 5px rgb(189, 189, 189);
+  font-family: "Share Tech Mono", monospace;
+  text-shadow: -1px 1px 5px rgb(189, 189, 189);
+  color: #d39076;
+  text-shadow: -1px 1px 1px #000;
 }
 
 .listing-button {
@@ -21,8 +23,8 @@
 }
 
 .listing-button:hover {
-    color: black;
-    background-color: rgb(219, 216, 159);
+  color: black;
+  background-color: rgb(219, 216, 159);
 }
 
 .save-button:hover {
@@ -44,6 +46,6 @@
 }
 
 .feature-bar {
-    background-color: #1E1E1E;
-    color: white;
+  background-color: #1e1e1e;
+  color: white;
 }
