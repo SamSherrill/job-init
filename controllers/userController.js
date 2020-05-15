@@ -1,9 +1,9 @@
 // Code on this page was originally copied from Jonathan's For Rover app.
 // We will be adjusting it for our app.
 
-const express = require("express");
-const router = express.Router();
-const db = require("../models");
+// const express = require("express");
+// const router = express.Router();
+// const db = require("../models");
 // const jwt = require("jsonwebtoken");
 
 // /**
@@ -16,21 +16,21 @@ const db = require("../models");
 // }));
 // app.use(express.json());
 
-router.post("/api/users", (req, res) => {
-  console.log("Hit the post route");
-  console.log(req.body);
-  db.userData
-    .create(req.body)
-    .then((dbUsers) => {
-      res.json(dbUsers);
-    })
-    .catch((err) => {
-      console.log(err);
-      res.status(500).json(err);
-    });
-});
+// router.post("/api/users", (req, res) => {
+//   console.log("Hit the post route");
+//   console.log(req.body);
+//   db.userData
+//     .create(req.body)
+//     .then((dbUsers) => {
+//       res.json(dbUsers);
+//     })
+//     .catch((err) => {
+//       console.log(err);
+//       res.status(500).json(err);
+//     });
+// });
 
-module.exports = router;
+// module.exports = router;
 
 // router.post("/api/users", (req, res) => {
 //   // Need to pass all of the info into the new user's profile

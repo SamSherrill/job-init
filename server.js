@@ -4,10 +4,9 @@ require("dotenv").config();
 const express = require("express");
 const path = require("path");
 const db = require("./models");
-// we may not need to do both of these things above & below
 const userData = require("./models/user.js");
-// const userController = require("./controllers/userController.js");
 const mongoose = require("mongoose");
+const testController = require("./controllers/testController");
 
 const PORT = process.env.PORT || 3001;
 
@@ -28,6 +27,8 @@ app.get("/api/config", (req, res) => {
 });
 
 
+
+app.use("/api/test", testController);
 
 // MONGOOSE ROUTES =================================================
 // Later we'll pull these routes into a routes folder, and then require the routes
