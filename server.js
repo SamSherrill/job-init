@@ -1,7 +1,7 @@
 require("dotenv").config();
 const express = require("express");
 const path = require("path");
-const db = require("./models");
+// const db = require("./models");
 // const userData = require("./models/user.js");
 const mongoose = require("mongoose");
 const TestController = require("./controllers/testController");
