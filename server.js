@@ -1,10 +1,12 @@
-console.log("Travbot is booting up!");
+console.log("server is starting");
 
 require("dotenv").config();
 const express = require("express");
 const path = require("path");
 const db = require("./models");
+// we may not need to do both of these things above & below
 const userData = require("./models/user.js");
+// const userController = require("./controllers/userController.js");
 const mongoose = require("mongoose");
 
 const PORT = process.env.PORT || 3001;
@@ -41,6 +43,7 @@ app.get("/api/users", (req, res) => {
     });
 });
 
+// app.use("/api/users", userController);
 app.post("/api/users", (req, res) => {
   console.log("Hit the post route");
   console.log(req.body);
@@ -63,11 +66,9 @@ app.post("/api/users", (req, res) => {
 
 // HTML ROUTES ====================================================
 app.use(express.static("client/build"));
-// app.use(express.static("client/public"));
 
 app.get("*", (req, res) => {
   res.sendFile(path.join(__dirname, "/client/build/index.html"));
-  // res.sendFile(path.join(__dirname, "/client/public/index.html"));
 });
 //==================================================================
 
