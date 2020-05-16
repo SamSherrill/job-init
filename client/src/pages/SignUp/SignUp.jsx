@@ -54,19 +54,6 @@ class SignUp extends Component {
     }));
   };
 
-  // Jonathan did this in a functional component. We're in a class component
-  // We'll need to adjust accordingly for a class component
-  // const [email, setEmail] = useState("");
-  // const [password, setPassword] = useState("");
-  // <Input
-  //             id="password"
-  //             type="password"
-  //             name="password"
-  //             value={password}
-  //             label="Password"
-  //             handleChange={(e) => setPassword(e.target.value)}
-  //           />
-
   handleFormSubmit = (
     formSubmitEvent,
     firstName,
