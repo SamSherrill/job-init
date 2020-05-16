@@ -63,12 +63,7 @@ class SignUp extends Component {
     location
   ) => {
     formSubmitEvent.preventDefault();
-    console.log(
-      `formSubmitEvent (and logged directly below): ${formSubmitEvent}, firstName: ${this.state.firstName}, lastName: ${this.state.lastName},
-      email: ${this.state.email}, password: ${this.state.password}, location: ${this.state.location}, checkboxes (and logged 2 lines down): ${this.state.checkboxes}`
-    );
-    console.log(formSubmitEvent);
-    console.log(this.state.checkboxes);
+    
     
 
     Object.keys(this.state.checkboxes)
@@ -92,6 +87,8 @@ class SignUp extends Component {
       .catch((err) => {
         console.log(err);
       });
+
+      this.props.history.push('/dashboard');
   };
 
   renderSkills = (someSkills, startIdx, endIdx) => (
