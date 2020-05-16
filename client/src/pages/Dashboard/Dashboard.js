@@ -20,7 +20,7 @@ class Dashboard extends Component {
       .get(`/api/users`)
       .then((response) => {
         console.log("***************************");
-        console.log(response);
+        console.log(response.data[response.data.length -1]);
         console.log("***************************");
       })
       .catch((err) => {
