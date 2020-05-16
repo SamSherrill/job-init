@@ -12,7 +12,21 @@ class Dashboard extends Component {
 
   componentDidMount() {
     this.getJobResult();
+    this.getUserSkills();
   }
+
+  getUserSkills = () => {
+    axios
+      .get(`/api/users`)
+      .then((response) => {
+        console.log("***************************");
+        console.log(response);
+        console.log("***************************");
+      })
+      .catch((err) => {
+        console.log(err);
+      });
+  };
 
   getJobResult = () => {
     axios
