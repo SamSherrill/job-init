@@ -2,7 +2,7 @@ import React from "react";
 import "./Login.css";
 import Form from "react-bootstrap/Form";
 import Button from "react-bootstrap/Button";
-// import { Link } from "react-router-dom";
+import { Link } from "react-router-dom";
 import Card from "react-bootstrap/Card";
 
 function Login() {
@@ -36,8 +36,11 @@ function Login() {
           placeholder="Password"
         />
       </Form.Group>
-      
-      <Button className="btn-lg btn-dark btn-block login-button">Login</Button>
+      <Link to = "/dashboard">
+        <Button className="btn-lg btn-block login-button">Login</Button>
+      </Link>
+  
+      {/* this.props.history.push('/dashboard'); */}
     </Form>
     </Card.Body>
         </Card>
