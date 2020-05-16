@@ -10,7 +10,7 @@ const Navbar = () => {
           job <span id="brand-two">init</span>
         </span>
       </Link>
-      <div className="collapse navbar-collapse" id="navbarNav">
+      {/* <div className="collapse navbar-collapse" id="navbarNav">
         <ul className="navbar-nav ml-auto mt-2 mt-lg-0">
           <li className="nav-item active">
             <Link className="nav-link nav-link-job" to="/login">
@@ -38,7 +38,7 @@ const Navbar = () => {
             </Link>
           </li>
         </ul>
-      </div>
+      </div> */}
     </nav>
   );
 };
