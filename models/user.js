@@ -57,12 +57,12 @@ const userSchema = new Schema({
     }
   }
 
-// === MAYBE USEFUL IF WE WANT TO ONLY SHOW NEW JOBS LATER ========
-//   date: {
-//     type: Date,
-//     default: Date.now
-//   }
-//==================================================================
+  // === MAYBE USEFUL IF WE WANT TO ONLY SHOW NEW JOBS LATER ========
+  //   date: {
+  //     type: Date,
+  //     default: Date.now
+  //   }
+  //==================================================================
 });
 
 const userData = mongoose.model("userData", userSchema);

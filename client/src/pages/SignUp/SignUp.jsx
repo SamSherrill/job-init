@@ -6,6 +6,7 @@ import InputGroup from "react-bootstrap/InputGroup";
 import FormControl from "react-bootstrap/FormControl";
 import axios from "axios";
 import Card from "react-bootstrap/Card";
+import { withRouter } from "react-router-dom";
 
 const skills = [
   "HTML",
@@ -63,8 +64,6 @@ class SignUp extends Component {
     location
   ) => {
     formSubmitEvent.preventDefault();
-    
-    
 
     Object.keys(this.state.checkboxes)
       .filter((checkbox) => this.state.checkboxes[checkbox])
@@ -82,19 +81,20 @@ class SignUp extends Component {
         skills: this.state.checkboxes
       })
       .then((result) => {
-        console.log(result);
+        console.log(result, "result");
+        this.props.history.push("/dashboard", { result: result.data });
       })
       .catch((err) => {
         console.log(err);
       });
 
-      this.props.history.push('/dashboard');
+      // this.props.history.push('/dashboard');
   };
 
   renderSkills = (someSkills, startIdx, endIdx) => (
     <div className="row" key={startIdx}>
       {someSkills.slice(startIdx, endIdx).map((skill, idx) => (
-        <div className="col-4" key={idx}>
+        <div className="col-12 col-md-4" key={idx}>
           <Form.Check
             custom
             inline
@@ -105,7 +105,7 @@ class SignUp extends Component {
             name={skill}
             type="checkbox"
             id={`id-${skill}`}
-            className="mb-3"
+            className="mb-3 p-0"
           />
         </div>
       ))}
@@ -184,9 +184,9 @@ class SignUp extends Component {
           <h3 className="h3 skills-text">skills</h3>
         </div>
         <div className="skills-checks">
-        {this.renderSkills(skills, 0, 3)}
-        {this.renderSkills(skills, 3, 6)}
-        {this.renderSkills(skills, 6, 9)}
+          {this.renderSkills(skills, 0, 3)}
+          {this.renderSkills(skills, 3, 6)}
+          {this.renderSkills(skills, 6, 9)}
         </div>
 
         <Button
@@ -206,4 +206,4 @@ class SignUp extends Component {
   }
 }
 
-export default SignUp;
+export default withRouter(SignUp);

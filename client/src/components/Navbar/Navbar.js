@@ -2,7 +2,16 @@ import React from "react";
 import "./Navbar.css";
 import { Link } from "react-router-dom";
 
+function handleClick(event) {
+  event.preventDefault();
+
+  localStorage.removeItem("isLoggedIn");
+  localStorage.removeItem("email");
+  window.location.replace("/login");
+}
+
 const Navbar = () => {
+  var loginFlag = localStorage.getItem("isLoggedIn");
   return (
     <nav className="navbar navbar-expand-lg job-nav">
       <Link to="/">
@@ -10,11 +19,13 @@ const Navbar = () => {
           job <span id="brand-two">init</span>
         </span>
       </Link>
-      {/* <div className="collapse navbar-collapse" id="navbarNav">
+      <div className="collapse navbar-collapse" id="navbarNav">
         <ul className="navbar-nav ml-auto mt-2 mt-lg-0">
           <li className="nav-item active">
             <Link className="nav-link nav-link-job" to="/login">
-              login
+              {loginFlag && localStorage.getItem("email")
+                ? localStorage.getItem("email")
+                : "login"}
             </Link>
           </li>
           <li className="nav-item">
@@ -22,23 +33,27 @@ const Navbar = () => {
               signup
             </Link>
           </li>
-          <li className="nav-item">
+          {/* <li className="nav-item">
             <Link className="nav-link nav-link-job" to="/account">
               account
             </Link>
-          </li>
+          </li> */}
           <li className="nav-item">
             <Link className="nav-link nav-link-job" to="/dashboard">
               dashboard
             </Link>
           </li>
           <li className="nav-item active">
-            <Link className="nav-link nav-link-job" to="/login">
+            <Link
+              className="nav-link nav-link-job"
+              to="/login"
+              onClick={handleClick}
+            >
               logout
             </Link>
           </li>
         </ul>
-      </div> */}
+      </div>
     </nav>
   );
 };

@@ -28,6 +28,8 @@ app.get("/api/config", (req, res) => {
 
 app.use("/api/test", TestController);
 app.use("/api/users", UserController);
+app.use("/api/users/userByEmail", UserController);
+app.use("/api/users/userById", UserController);
 
 // API ROUTES ======================================================
 // id --   e61b06cb
