@@ -22,8 +22,6 @@ This App is different from other job listings sites by specifically:
 * Market to recent boot camp grads
 * Utility addresses the problem of graduates overwhelmed by job postings
 
-![app preview screenshot](#)
-
 ## User Story
 
 As a user I WANT to input my skills and job preferences SO THAT i can receive personalized jobs openings.
@@ -32,11 +30,22 @@ As a user I WANT to input my skills and job preferences SO THAT i can receive pe
 
 Describe features & include screenshots
 
-![example of basic webpage functionality](#)
+Home Screenshot
 
-![example of ##### functionality](#)
+![](/client/src/img/home.jpeg)
 
-![example of #####](#)
+Login Screenshot
+
+![](/client/src/img/login.jpeg)
+
+SignUp Screenshot
+
+![](/client/src/img/signUp.jpeg)
+
+User Dashboard Screenshot
+
+![](/client/src/img/dashboard.jpeg)
+
 
 ## How to Use
 1. Open the page and either login if you already have an account or sign up if you are a new user,
