@@ -21,7 +21,7 @@ class Login extends Component {
 
   handleLogin = (event) => {
     event.preventDefault();
-    console.log(event, "event");
+    // console.log(event, "event");
 
     const userCredentials = {
       email: this.state.email,
@@ -31,7 +31,7 @@ class Login extends Component {
     axios
       .post("/api/users/userByEmail", userCredentials)
       .then((result) => {
-        console.log(result, "result");
+        // console.log(result, "result");
 
         if (result.data) {
           localStorage.setItem("isLoggedIn", "yes");
