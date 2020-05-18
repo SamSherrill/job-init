@@ -11,24 +11,25 @@ class Dashboard extends Component {
   };
 
   componentDidMount() {
-    
-    this.getUserSkills();
+
+    if (this.props && this.props.location && this.props.location.state) {
+      this.getUserSkills(this.props.location.state.result);
+    } else {
+      console.log("No user was logged in");
+    }
   }
 
-  getUserSkills = () => {
+  getUserSkills = (user) => {
     axios
-      .get(`/api/users`)
+      .post("/api/users/userById", {_id: user._id})
       .then((response) => {
         console.log("***************************");
-        console.log(response.data[response.data.length -1]);
+        console.log(response.data);
         console.log("***************************");
-        
-        const userSkillsAndLocation = response.data[response.data.length - 1];
-        
-        
-        this.getJobResult(userSkillsAndLocation);
 
-        
+        const userSkillsAndLocation = response.data;
+
+        this.getJobResult(userSkillsAndLocation);
       })
       .catch((err) => {
         console.log(err);
