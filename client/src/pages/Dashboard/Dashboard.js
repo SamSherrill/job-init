@@ -23,9 +23,7 @@ class Dashboard extends Component {
     axios
       .post("/api/users/userById", {_id: user._id})
       .then((response) => {
-        console.log("***************************");
-        console.log(response.data);
-        console.log("***************************");
+        // console.log(response.data);
 
         const userSkillsAndLocation = response.data;
 
@@ -47,7 +45,6 @@ class Dashboard extends Component {
     
     var skillsQuerySection = ""
     skillsQuerySection = buildQueryURL();
-    console.log("blah blah blah :) skills query section below, outside of buildQueryURL, but before axios call to Adzuna")
     console.log(skillsQuerySection);
 
     axios
@@ -55,7 +52,7 @@ class Dashboard extends Component {
         `https://api.adzuna.com/v1/api/jobs/us/search/1?app_id=e61b06cb&app_key=0f4b8fc49b430d828c3c2a0b28246429&results_per_page=20&what=${skillsQuerySection}%20developer&content-type=application/json`
       )
       .then((response) => {
-        console.log(response.data.results);
+        // console.log(response.data.results);
         this.setState({
           jobResults: response.data.results,
         });

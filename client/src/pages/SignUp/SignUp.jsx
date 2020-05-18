@@ -45,7 +45,7 @@ class SignUp extends Component {
 
   handleCheckboxChange = (changeEvent) => {
     const { name } = changeEvent.target;
-    console.log(name);
+    // console.log(name);
 
     this.setState((prevState) => ({
       checkboxes: {
@@ -81,7 +81,7 @@ class SignUp extends Component {
         skills: this.state.checkboxes
       })
       .then((result) => {
-        console.log(result, "result");
+        // console.log(result, "result");
         this.props.history.push("/dashboard", { result: result.data });
       })
       .catch((err) => {
